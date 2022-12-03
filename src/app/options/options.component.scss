@@ -1,0 +1,123 @@
+svg {
+    width: 28px;
+    fill: #7B66FF;
+}
+
+.shape-outside {
+    z-index: 1;
+}
+
+
+.dial-container {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%
+}
+
+.svg-container {
+    svg {
+        fill: #c7c7c7;
+        width: 27px;
+    }
+}
+
+.gender-btn {
+    border: 2px solid transparent;
+    transition: border .4s;
+}
+
+.purple-trapezoid {
+    clip-path: polygon(7% 0, 94% 0, 80% 100%, 19% 100%);
+    height: 127px;
+    width: 206px;
+    border-radius: 30px;
+    margin: 0 auto;
+    top: 40px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.middle {}
+
+svg.nav-icon {
+    width: 27px !important;
+    fill: #5a5a5a !important;
+}
+
+.crescent {
+    height: 29vh;
+    width: 150%;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0px -130px 0 0 #fff;
+    border-radius: 50%;
+    left: -25%;
+    top: 112px;
+}
+
+.bottom {
+    position: relative;
+    top: -97px;
+}
+
+.component {
+    transition-delay: .9s;
+    top: -100%;
+    opacity: 0;
+    transition: top .5s ease-out, opacity .5s ease-out, display .5s ease-out;
+
+    &.active {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.options {
+    // transform: scale(1);
+    bottom: 0;
+    transition: bottom .6s;
+    // transition-delay: .24s;
+
+    li {
+        opacity: 1;
+        transition: opacity .1s;
+        // transition-delay: .4s;
+    }
+
+    .selectedButton {
+        background-color: #fff;
+        left: 0;
+        position: relative;
+        bottom: 0;
+        text-align: left;
+        border-radius: 0;
+        transition: background-color .5s, bottom .5s, left .5s, position .5s, border-radius .5s, text-align .5s;
+        // transition-delay: .24s;
+    }
+
+    &.inactive {
+        bottom: -100%;
+
+        svg {
+            fill: #fff;
+        }
+
+        li:not(:nth-child(3)) {
+            opacity: 0;
+        }
+
+        .selectedButton {
+            bottom: 70%;
+            color: #fff;
+            position: relative;
+            left: 47%;
+            text-align: center;
+            border-radius: 4px;
+        }
+    }
+}
+
+@keyframes identifier {}

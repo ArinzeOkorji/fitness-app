@@ -1,0 +1,30 @@
+svg {
+    fill: #7B66FF;
+    width: 30px;
+}
+
+svg.play {
+    fill: #C3FF4D;
+    width: 45px;
+}
+
+.card-row {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+::ng-deep .apexcharts-canvas {
+    background-color: #7B66FF;
+  }
+
+  canvas {
+    width: 100%;
+    background: #7b66ff;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+
+  .nav-icon {
+    width: 40px !important;
+    fill: #5a5a5a !important;
+  }

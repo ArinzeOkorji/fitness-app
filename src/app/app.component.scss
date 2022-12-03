@@ -1,0 +1,62 @@
+@keyframes button-aminate {
+    0% {
+        bottom: 40px;
+        transform: rotateZ(100deg) scale(0);
+    }
+
+    50% {
+        bottom: 80px;
+    }
+
+    75% {
+        transform: rotateZ(35deg)
+    }
+
+    100% {
+        bottom: 40px;
+        transform: rotateZ(0deg) scale(1);
+    }
+}
+
+ul {
+    list-style: none;
+
+    li {
+        svg {
+            fill: rgb(197, 197, 197);
+            width: 28px;
+        }
+
+        &.active {
+            svg {
+                fill: #7B66FF;
+            }
+        }
+
+        button {
+            bottom: 40px;
+            height: 60px;
+            width: 60px;
+            // transform: rotateZ(33deg) scale(0);
+
+            // animation: button-aminate .3 ease;
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+button {
+    // transform: rotateZ(33deg) scale(0);
+    position: relative;
+    animation-name: button-aminate;
+    animation-duration: .6s;
+}
+
+
+
+.main {
+    min-height: 112vh;
+}

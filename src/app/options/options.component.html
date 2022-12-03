@@ -1,0 +1,123 @@
+<div class="component position-relative h-100 bg-light" [ngClass]="{'active': isSelected, 'position-absolute': !isSelected}">
+    <div class="container py-3">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between" (click)="close()">
+                <div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="nav-icon" viewBox="0 0 48 49">
+                            <path d="M20 44 0 24 20 4l2.8 2.85L5.65 24 22.8 41.15Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="fw-bold mb-0">Add Weight</h2>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="nav-icon" viewBox="0 0 48 49">
+                    <path d="M21.35 42V30.75h3v4.15H42v3H24.35V42ZM6 37.9v-3h12.35v3Zm9.35-8.3v-4.1H6v-3h9.35v-4.2h3v11.3Zm6-4.1v-3H42v3Zm8.3-8.25V6h3v4.1H42v3h-9.35v4.15ZM6 13.1v-3h20.65v3Z"/>
+                </svg>
+        </div>
+        </div>
+    </div>
+    
+    <div class="h-100 bg-light">
+        <div class="shape-outside position-relative">
+            <div class="purple-trapezoid bg-primary position-relative d-flex align-items-center justify-content-center">
+                <h1 class="text-light mb-0 fw-bold">52,3</h1>
+            </div>
+        </div>
+    
+    
+    
+        <div class="crescent">
+        
+        </div>
+    
+        <div class="h-50 bottom">
+            <div class="d-flex align-items-center justify-content-around container mt-4">
+                <div class="col-5 p-3 py-4 shadow bg-white rounded fs-3 gender-btn fw-bold align-items-center justify-content-center d-flex pointer"
+                    [ngClass]="{'border-secondary-2': selected === 'male'}" (click)="selected = 'male'">Male</div>
+                <div class="col-5 p-3 py-4 shadow bg-white rounded fs-3 gender-btn fw-bold align-items-center justify-content-center d-flex pointer"
+                    [ngClass]="{'border-secondary-2': selected === 'female'}" (click)="selected = 'female'">Female</div>
+            </div>
+            <div class="d-flex align-items-center justify-content-around container mt-3">
+                <div class="col-5 shadow bg-white flex-column rounded align-items-center justify-content-center d-flex">
+                    <div class="align-items-center w-100 justify-content-around d-flex py-3">
+                        <div class="fw-bold">Age</div>
+                        <div class="svg-container">
+                            <svg viewBox="0 0 48 49" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                                <path
+                                    d="m19.4 44-1-6.3q-.95-.35-2-.95t-1.85-1.25l-5.9 2.7L4 30l5.4-3.95q-.1-.45-.125-1.025Q9.25 24.45 9.25 24q0-.45.025-1.025T9.4 21.95L4 18l4.65-8.2 5.9 2.7q.8-.65 1.85-1.25t2-.9l1-6.35h9.2l1 6.3q.95.35 2.025.925Q32.7 11.8 33.45 12.5l5.9-2.7L44 18l-5.4 3.85q.1.5.125 1.075.025.575.025 1.075t-.025 1.05q-.025.55-.125 1.05L44 30l-4.65 8.2-5.9-2.7q-.8.65-1.825 1.275-1.025.625-2.025.925l-1 6.3ZM24 30.5q2.7 0 4.6-1.9 1.9-1.9 1.9-4.6 0-2.7-1.9-4.6-1.9-1.9-4.6-1.9-2.7 0-4.6 1.9-1.9 1.9-1.9 4.6 0 2.7 1.9 4.6 1.9 1.9 4.6 1.9Zm0-3q-1.45 0-2.475-1.025Q20.5 25.45 20.5 24q0-1.45 1.025-2.475Q22.55 20.5 24 20.5q1.45 0 2.475 1.025Q27.5 22.55 27.5 24q0 1.45-1.025 2.475Q25.45 27.5 24 27.5Zm0-3.5Zm-2.2 17h4.4l.7-5.6q1.65-.4 3.125-1.25T32.7 32.1l5.3 2.3 2-3.6-4.7-3.45q.2-.85.325-1.675.125-.825.125-1.675 0-.85-.1-1.675-.1-.825-.35-1.675L40 17.2l-2-3.6-5.3 2.3q-1.15-1.3-2.6-2.175-1.45-.875-3.2-1.125L26.2 7h-4.4l-.7 5.6q-1.7.35-3.175 1.2-1.475.85-2.625 2.1L10 13.6l-2 3.6 4.7 3.45q-.2.85-.325 1.675-.125.825-.125 1.675 0 .85.125 1.675.125.825.325 1.675L8 30.8l2 3.6 5.3-2.3q1.2 1.2 2.675 2.05Q19.45 35 21.1 35.4Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="py-2 display-1 fw-bold">21</div>
+                </div>
+                <div class="col-5 shadow bg-white flex-column rounded align-items-center justify-content-center d-flex">
+                    <div class="align-items-center w-100 justify-content-around d-flex py-3">
+                        <div class="fw-bold">Height</div>
+                        <div class="svg-container">
+                            <svg viewBox="0 0 48 49" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                                <path
+                                    d="m19.4 44-1-6.3q-.95-.35-2-.95t-1.85-1.25l-5.9 2.7L4 30l5.4-3.95q-.1-.45-.125-1.025Q9.25 24.45 9.25 24q0-.45.025-1.025T9.4 21.95L4 18l4.65-8.2 5.9 2.7q.8-.65 1.85-1.25t2-.9l1-6.35h9.2l1 6.3q.95.35 2.025.925Q32.7 11.8 33.45 12.5l5.9-2.7L44 18l-5.4 3.85q.1.5.125 1.075.025.575.025 1.075t-.025 1.05q-.025.55-.125 1.05L44 30l-4.65 8.2-5.9-2.7q-.8.65-1.825 1.275-1.025.625-2.025.925l-1 6.3ZM24 30.5q2.7 0 4.6-1.9 1.9-1.9 1.9-4.6 0-2.7-1.9-4.6-1.9-1.9-4.6-1.9-2.7 0-4.6 1.9-1.9 1.9-1.9 4.6 0 2.7 1.9 4.6 1.9 1.9 4.6 1.9Zm0-3q-1.45 0-2.475-1.025Q20.5 25.45 20.5 24q0-1.45 1.025-2.475Q22.55 20.5 24 20.5q1.45 0 2.475 1.025Q27.5 22.55 27.5 24q0 1.45-1.025 2.475Q25.45 27.5 24 27.5Zm0-3.5Zm-2.2 17h4.4l.7-5.6q1.65-.4 3.125-1.25T32.7 32.1l5.3 2.3 2-3.6-4.7-3.45q.2-.85.325-1.675.125-.825.125-1.675 0-.85-.1-1.675-.1-.825-.35-1.675L40 17.2l-2-3.6-5.3 2.3q-1.15-1.3-2.6-2.175-1.45-.875-3.2-1.125L26.2 7h-4.4l-.7 5.6q-1.7.35-3.175 1.2-1.475.85-2.625 2.1L10 13.6l-2 3.6 4.7 3.45q-.2.85-.325 1.675-.125.825-.125 1.675 0 .85.125 1.675.125.825.325 1.675L8 30.8l2 3.6 5.3-2.3q1.2 1.2 2.675 2.05Q19.45 35 21.1 35.4Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="py-2 display-1 fw-bold">173</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="options p-0 h-100 d-flex flex-column justify-content-around mx-3" [ngClass]="{'inactive position-fixed': isSelected}">
+    <li class="d-flex align-items-center justify-content-evenly shadow py-2">
+        <div class="col-3 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                <path
+                    d="M36.5 34v-6.5H30v-3h6.5V18h3v6.5H46v3h-6.5V34ZM22 42l-6.35-5.7q-3.6-3.25-6.175-5.8-2.575-2.55-4.25-4.8-1.675-2.25-2.45-4.35Q2 19.25 2 16.95q0-4.7 3.15-7.825T13 6q2.6 0 4.95 1.075T22 10.15q1.7-2 4.05-3.075Q28.4 6 31 6q4.25 0 7.125 2.575T41.7 14.6q-.9-.35-1.8-.525-.9-.175-1.75-.175-5.05 0-8.6 3.525T26 26q0 2.6 1.05 4.925Q28.1 33.25 30 34.9q-.95.85-2.475 2.175Q26 38.4 24.9 39.4Z" />
+            </svg>
+        </div>
+
+        <div class="col-9 fw-bold">
+            Add Blood Pressure
+        </div>
+    </li>
+    <li class="d-flex align-items-center justify-content-evenly shadow py-2">
+        <div class="col-3 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                <path
+                    d="M9 42q-1.3 0-2.15-.85Q6 40.3 6 39V9q0-1.3.85-2.15Q7.7 6 9 6h10.1q.35-1.75 1.725-2.875T24 2q1.8 0 3.175 1.125Q28.55 4.25 28.9 6H39q1.3 0 2.15.85Q42 7.7 42 9v30q0 1.3-.85 2.15Q40.3 42 39 42Zm0-3h30V9h-3v4.5H12V9H9v30ZM24 9q.85 0 1.425-.575Q26 7.85 26 7q0-.85-.575-1.425Q24.85 5 24 5q-.85 0-1.425.575Q22 6.15 22 7q0 .85.575 1.425Q23.15 9 24 9Z" />
+            </svg>
+        </div>
+
+        <div class="col-9 fw-bold">
+            Add Weight Management
+        </div>
+    </li>
+    <li class="d-flex align-items-center justify-content-evenly shadow py-2 selectedButton" [ngClass]="{'text-center rounded bg-primary': isSelected}" (click)="!isSelected ? select() : close()">
+        <div class="col-3 text-center" *ngIf="!isSelected">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                <path
+                    d="M30.95 10.3q-1.5 0-2.575-1.075Q27.3 8.15 27.3 6.65q0-1.5 1.075-2.575Q29.45 3 30.95 3q1.5 0 2.575 1.075Q34.6 5.15 34.6 6.65q0 1.5-1.075 2.575Q32.45 10.3 30.95 10.3ZM21.1 20.6l4.45 4.75V37.7h-3v-10l-6.8-5.95q-.45-.4-.75-1.075-.3-.675-.3-1.375t.325-1.35q.325-.65.725-1.05l5.95-5.95q.4-.4 1.125-.725.725-.325 1.525-.325.8 0 1.525.325.725.325 1.125.725l3.9 3.9q1.35 1.35 3.225 2.325 1.875.975 4.225.975v3q-3 0-5.4-1.125-2.4-1.125-4.3-3.025l-2-2ZM10 24.5q4.15 0 6.95 2.8t2.8 6.95q0 4.15-2.8 6.95T10 44q-4.15 0-6.95-2.8t-2.8-6.95q0-4.15 2.8-6.95T10 24.5Zm0 17.05q3.1 0 5.2-2.1t2.1-5.2q0-3.1-2.1-5.2t-5.2-2.1q-3.1 0-5.2 2.1t-2.1 5.2q0 3.1 2.1 5.2t5.2 2.1ZM38 24.5q4.15 0 6.95 2.8t2.8 6.95q0 4.15-2.8 6.95T38 44q-4.15 0-6.95-2.8t-2.8-6.95q0-4.15 2.8-6.95T38 24.5Zm0 17.05q3.1 0 5.2-2.1t2.1-5.2q0-3.1-2.1-5.2t-5.2-2.1q-3.1 0-5.2 2.1t-2.1 5.2q0 3.1 2.1 5.2t5.2 2.1Z" />
+            </svg>
+        </div>
+
+        <div class="col-9 fw-bold" *ngIf="!isSelected">
+            Add Activity
+        </div>
+
+        <div *ngIf="isSelected" class="py-2">Save</div>
+    </li>
+    <li class="d-flex align-items-center justify-content-evenly shadow py-2">
+        <div class="col-3 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                <path
+                    d="m18.3 44-2.35-8.55Q13.2 33.7 11.6 30.7 10 27.7 10 24t1.6-6.725q1.6-3.025 4.35-4.725L18.3 4h11.4l2.35 8.55q2.75 1.7 4.35 4.725Q38 20.3 38 24q0 3.7-1.6 6.7t-4.35 4.75L29.7 44Zm5.7-9q4.6 0 7.8-3.2T35 24q0-4.6-3.2-7.8T24 13q-4.6 0-7.8 3.2T13 24q0 4.6 3.2 7.8T24 35Zm-4.35-24.2q1.15-.35 2.225-.525Q22.95 10.1 24 10.1t2.125.175q1.075.175 2.225.525l-.9-3.8h-6.9Zm.9 30.2h6.9l.9-3.8q-1.15.3-2.225.475-1.075.175-2.125.175t-2.125-.175Q20.8 37.5 19.65 37.2Zm-.9-34H28.35h-8.7Zm.9 34h-.9 8.7-.9Z" />
+            </svg>
+        </div>
+
+        <div class="col-9 fw-bold">
+            Track My Activity
+        </div>
+    </li>
+</ul>

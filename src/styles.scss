@@ -1,1 +1,148 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$fitness-app-primary: mat.define-palette(mat.$indigo-palette);
+$fitness-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$fitness-app-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$fitness-app-theme: mat.define-light-theme((
+  color: (
+    primary: $fitness-app-primary,
+    accent: $fitness-app-accent,
+    warn: $fitness-app-warn,
+  )
+));
+
+@import "~ng-zorro-antd/style/index.min.css";
+@import "~ng-zorro-antd/progress/style/index.min.css";
+
+$primary: #7B66FF;
+$secondary: #C3FF4D;
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($fitness-app-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Questrial', sans-serif !important;}
+
+
+.bg {
+  &-primary {
+    background-color: $primary !important;
+  }
+  &-secondary {
+    background-color: $secondary !important;
+  }
+}
+
+.border {
+  &-primary {
+    border: 1px solid $primary !important;
+  }
+  &-secondary {
+    border: 1px solid $secondary !important;
+  }
+  &-secondary-2 {
+    border: 2px solid $secondary !important;
+  }
+}
+
+.shadow {
+  box-shadow: rgba(186, 177, 206, 0.2) 0px 8px 24px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+}
+
+.text-grey {
+  color: #bfbfbf;
+}
+
+.cdk-overlay-pane {
+  margin: 0 auto !important;
+}
+
+@keyframes modal-opener {
+  from {
+    transform: scaleY(0)
+  }
+
+  to {
+    transform: scaleY(1)
+  }
+}
+.mat-dialog-container {
+  position: relative;
+  top: 16%;
+  transform: scaleY(0);
+  animation-name: modal-opener;
+  animation-duration: .25s;
+  transition: top .5s;
+}
+
+.mat-dialog-container::after {
+  content: "" !important;
+  z-index: 99999;
+  border: 27px solid #fff;
+  position: fixed;
+  bottom: 11%;
+  left: 42%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transition: border-width .2s ease;
+}
+
+
+@keyframes expandPanel {
+  from {
+    transform: scaleX(0.8) scaleY(0.5);
+  }
+  to {
+  transform: scaleX(1) scaleY(1);
+  }
+}
+.expand-panel {
+  animation-name: expandPanel;
+  animation-duration: .5s;
+
+  .mat-dialog-container {
+    top: 0;
+  }
+
+  .mat-dialog-container::after {
+    border-width: 0px;
+  }
+
+  
+}
+.mat-dialog-container {
+    padding: 0px !important;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}

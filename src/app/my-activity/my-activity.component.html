@@ -1,0 +1,89 @@
+<div class="container mt-3">
+    <div class="d-flex align-items-center justify-content-between">
+        <h2 class="fw-bold mb-0">My Activity</h2>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="nav-icon" viewBox="0 0 48 49">
+                <path d="M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM8 40v-4.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V40Zm3-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<div class="card-row py-3 px-3">
+    <div class="d-flex justify-content-between" style="width: 174%">
+        <div class="card d-flex align-items-center justify-content-between flex-row p-3 border-0 shadow rounded">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                    <path d="M11 28q0 3.15 1.425 5.925T16.4 38.55q-.2-.6-.3-1.225Q16 36.7 16 36.1q0-1.6.6-3t1.75-2.55L24 25l5.65 5.55q1.15 1.15 1.75 2.55.6 1.4.6 3 0 .6-.1 1.225-.1.625-.3 1.225 2.55-1.85 3.975-4.625Q37 31.15 37 28q0-2.7-1.15-5.275T32.55 18q-1.05.75-2.2 1.175-1.15.425-2.3.425-3.05 0-5.05-2.075T21 12.3v-1q-2.3 1.65-4.15 3.65-1.85 2-3.15 4.175-1.3 2.175-2 4.45Q11 25.85 11 28Zm13 1.2-3.55 3.5q-.7.7-1.075 1.55Q19 35.1 19 36.1q0 2.05 1.45 3.475Q21.9 41 24 41q2.1 0 3.55-1.425Q29 38.15 29 36.1q0-1-.375-1.85-.375-.85-1.075-1.55ZM24 6v6.6q0 1.7 1.175 2.85 1.175 1.15 2.875 1.15.9 0 1.675-.375T31.1 15.1L32 14q3.7 2.1 5.85 5.85Q40 23.6 40 28q0 6.7-4.65 11.35Q30.7 44 24 44q-6.7 0-11.35-4.65Q8 34.7 8 28q0-6.4 4.3-12.325Q16.6 9.75 24 6Z"/>
+                </svg>
+            </div>
+            <div class="ms-3">
+                <div class="fw-bold fs-2 mb-2">866</div>
+                <div class="fw-bold text-black-50">Calories burn</div>
+                <nz-progress [nzPercent]="30" [nzStrokeColor]="'#C3FF4D'" [nzShowInfo]="false"></nz-progress>
+            </div>
+        </div>
+        <div class="card d-flex align-items-center justify-content-between flex-row p-3 border-0 shadow rounded pe-5">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                    <path d="M15.75 36q-3.85 0-5.85-2.85-2-2.85-1.9-6.4l-.9-1.35q-.55-.85-1.825-3.85T4 14q0-5.15 2.55-8.575Q9.1 2 13 2q4.25 0 6.625 3.775T22 14q0 2.9-.8 5.35-.8 2.45-1.4 3.95l.4.65q.4.7 1.1 2.225.7 1.525.7 3.175 0 2.85-1.775 4.75T15.75 36Zm-6-12.05 7.2-1.5q.7-1.9 1.375-4.2Q19 15.95 19 14q0-3.35-1.575-6.175Q15.85 5 13 5q-2.6 0-4.3 2.55Q7 10.1 7 14q0 3.9 1.15 6.575 1.15 2.675 1.6 3.375Zm6 9.05q1.4 0 2.325-1.025Q19 30.95 19 29.35q0-1-.45-2.075-.45-1.075-1-1.925L11 26.7q-.05 2.15 1.075 4.225Q13.2 33 15.75 33Zm16.5 13q-2.7 0-4.475-1.9Q26 42.2 26 39.35q0-1.65.7-3.175t1.1-2.225l.4-.65q-.6-1.5-1.4-3.95Q26 26.9 26 24q0-4.45 2.375-8.225Q30.75 12 35 12q3.9 0 6.45 3.425Q44 18.85 44 24q0 4.55-1.275 7.525Q41.45 34.5 40.9 35.35l-.9 1.4q.05 3.55-1.925 6.4Q36.1 46 32.25 46Zm6-12.1q.5-.75 1.625-3.4T41 24q0-3.9-1.7-6.45Q37.6 15 35 15q-2.85 0-4.425 2.825Q29 20.65 29 24q0 2 .7 4.275.7 2.275 1.4 4.175Zm-6 9.1q2.55 0 3.65-2.1t1.1-4.25l-6.55-1.3q-.5.85-.975 1.925Q29 38.35 29 39.35q0 1.6.925 2.625T32.25 43Z"/>
+                </svg>
+            </div>
+            <div class="ms-3">
+                <div class="fw-bold fs-2 mb-2">7579</div>
+                <div class="fw-bold text-black-50">Steps</div>
+                <nz-progress [nzPercent]="30" [nzStrokeColor]="'#C3FF4D'" [nzShowInfo]="false"></nz-progress>
+            </div>
+        </div>
+        <div class="card d-flex align-items-center justify-content-between flex-row p-3 border-0 shadow rounded pe-5">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                    <path d="m18.3 44-2.35-8.55Q13.2 33.7 11.6 30.7 10 27.7 10 24t1.6-6.725q1.6-3.025 4.35-4.725L18.3 4h11.4l2.35 8.55q2.75 1.7 4.35 4.725Q38 20.3 38 24q0 3.7-1.6 6.7t-4.35 4.75L29.7 44Zm5.7-9q4.6 0 7.8-3.2T35 24q0-4.6-3.2-7.8T24 13q-4.6 0-7.8 3.2T13 24q0 4.6 3.2 7.8T24 35Zm-4.35-24.2q1.15-.35 2.225-.525Q22.95 10.1 24 10.1t2.125.175q1.075.175 2.225.525l-.9-3.8h-6.9Zm.9 30.2h6.9l.9-3.8q-1.15.3-2.225.475-1.075.175-2.125.175t-2.125-.175Q20.8 37.5 19.65 37.2Zm-.9-34H28.35h-8.7Zm.9 34h-.9 8.7-.9Z"/>
+                </svg>
+            </div>
+            <div class="ms-3">
+                <div class="fw-bold fs-2 mb-2">27 <span class="text-black-50 small fs-6">mins</span></div>
+                <div class="fw-bold text-black-50">Left today</div>
+                <nz-progress [nzPercent]="30" [nzStrokeColor]="'#C3FF4D'" [nzShowInfo]="false"></nz-progress>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="container mt-4">
+    <div class="d-flex align-items-center justify-content-between">
+        <h2 class="fw-bold mb-0 animate__animated animate__slideInRight animate__faster">Goal for week</h2>
+        <h2 class="fw-bold text-grey fs-6 m-0 animate__animated animate__slideInLeft animate__faster">42 of 54</h2>
+    </div>
+    <div style="display: block" class="mt-3">
+        <canvas baseChart
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [type]="barChartType">
+        </canvas>
+      </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="d-flex align-items-center justify-content-between">
+        <h2 class="fw-bold mb-0 animate__animated animate__slideInRight animate__faster">Trending Workouts</h2>
+        <h2 class="fw-bold text-grey fs-6 text-decoration-underline m-0 animate__animated animate__slideInLeft animate__faster">see all</h2>
+    </div>
+    <div class="mt-3">
+        <div class="card animate__animated animate__zoomIn d-flex align-items-center justify-content-between flex-row p-3 border-0 shadow rounded">
+            <div class="d-flex align-items-center">
+                <svg class="animate__animated animate__fadeInLeft" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49">
+                    <path d="M30.95 10.3q-1.5 0-2.575-1.075Q27.3 8.15 27.3 6.65q0-1.5 1.075-2.575Q29.45 3 30.95 3q1.5 0 2.575 1.075Q34.6 5.15 34.6 6.65q0 1.5-1.075 2.575Q32.45 10.3 30.95 10.3ZM21.1 20.6l4.45 4.75V37.7h-3v-10l-6.8-5.95q-.45-.4-.75-1.075-.3-.675-.3-1.375t.325-1.35q.325-.65.725-1.05l5.95-5.95q.4-.4 1.125-.725.725-.325 1.525-.325.8 0 1.525.325.725.325 1.125.725l3.9 3.9q1.35 1.35 3.225 2.325 1.875.975 4.225.975v3q-3 0-5.4-1.125-2.4-1.125-4.3-3.025l-2-2ZM10 24.5q4.15 0 6.95 2.8t2.8 6.95q0 4.15-2.8 6.95T10 44q-4.15 0-6.95-2.8t-2.8-6.95q0-4.15 2.8-6.95T10 24.5Zm0 17.05q3.1 0 5.2-2.1t2.1-5.2q0-3.1-2.1-5.2t-5.2-2.1q-3.1 0-5.2 2.1t-2.1 5.2q0 3.1 2.1 5.2t5.2 2.1ZM38 24.5q4.15 0 6.95 2.8t2.8 6.95q0 4.15-2.8 6.95T38 44q-4.15 0-6.95-2.8t-2.8-6.95q0-4.15 2.8-6.95T38 24.5Zm0 17.05q3.1 0 5.2-2.1t2.1-5.2q0-3.1-2.1-5.2t-5.2-2.1q-3.1 0-5.2 2.1t-2.1 5.2q0 3.1 2.1 5.2t5.2 2.1Z"/>
+                </svg>
+                <div class="fw-bold fs-5 ms-3 animate__animated animate__fadeInRight">Muscle Builder</div>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 49" class="play">
+                    <path d="M19.15 32.5 32.5 24l-13.35-8.5ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z"/>
+                </svg>
+            </div>
+        </div>
+      </div>
+  </div>
