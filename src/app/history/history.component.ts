@@ -7,6 +7,10 @@ import { ChartConfiguration, ChartType, ChartData } from 'chart.js';
   styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent implements OnInit {
+  data = [ 6, 9.5, 6, 7, 8.5, 5, 4 ];
+  pressureColors: string[] = [];
+  sleepColors: string[] = [];
+  dataThreshold = 8;
   public lineChartOptions: ChartConfiguration['options'] = {
     elements: {
       line: {
@@ -107,9 +111,9 @@ export class HistoryComponent implements OnInit {
   public pressureBarChartData: ChartData<'bar'> = {
     labels: [ 'T', 'W', 'T', 'F', 'S', 'S', 'M' ],
     datasets: [
-      { data: [ 10, 9, 8, 3, 4, 7, 5 ],
+      { data: this.data,
         label: '',
-        backgroundColor: '#C3FF4D',
+        backgroundColor: this.pressureColors,
         borderColor: 'red',
         borderRadius: 50,
         barThickness: 7
@@ -120,9 +124,9 @@ export class HistoryComponent implements OnInit {
   public sleepBarChartData: ChartData<'bar'> = {
     labels: [ 'T', 'W', 'T', 'F', 'S', 'S', 'M' ],
     datasets: [
-      { data: [ 10, 9, 8, 3, 4, 7, 5 ],
+      { data: this.data,
         label: '',
-        backgroundColor: '#7B66FF',
+        backgroundColor: this.sleepColors,
         borderColor: 'red',
         borderRadius: 50,
         barThickness: 7
@@ -133,6 +137,15 @@ export class HistoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.data.forEach(datum => {
+      if(datum > this.dataThreshold) {
+        this.sleepColors.push('#C3FF4D')
+        this.pressureColors.push('#7B66FF')
+      } else {
+        this.sleepColors.push('#f2ffd9')
+        this.pressureColors.push('#a99df9')
+      }
+    })
   }
 
 }

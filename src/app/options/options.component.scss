@@ -116,7 +116,33 @@ svg.nav-icon {
             left: 47%;
             text-align: center;
             border-radius: 4px;
+            font-size: 18px;
         }
+    }
+}
+
+.header {
+    position: relative;
+    left: 40px;
+    opacity: 0;
+    transition: left .4s, opacity .4s;
+    transition-delay: .4s;
+
+    &.active {
+        left: 0;
+        opacity: 1;
+    }
+}
+.icon {
+    position: relative;
+    right: 40px;
+    opacity: 0;
+    transition: right .4s, opacity .4s;
+    transition-delay: .4s;
+
+    &.active {
+        right: 0;
+        opacity: 1;
     }
 }
 

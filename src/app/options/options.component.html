@@ -2,16 +2,16 @@
     <div class="container py-3">
         <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center justify-content-between" (click)="close()">
-                <div>
+                <div class="icon"  [ngClass]="{'active': isSelected}">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="nav-icon" viewBox="0 0 48 49">
                             <path d="M20 44 0 24 20 4l2.8 2.85L5.65 24 22.8 41.15Z"/>
                         </svg>
                     </div>
                 </div>
-                <h2 class="fw-bold mb-0">Add Weight</h2>
+                <h2 class="fw-bold mb-0 header" [ngClass]="{'active': isSelected}">Add Weight</h2>
             </div>
-            <div>
+            <div class="icon"  [ngClass]="{'active': isSelected}">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="nav-icon" viewBox="0 0 48 49">
                     <path d="M21.35 42V30.75h3v4.15H42v3H24.35V42ZM6 37.9v-3h12.35v3Zm9.35-8.3v-4.1H6v-3h9.35v-4.2h3v11.3Zm6-4.1v-3H42v3Zm8.3-8.25V6h3v4.1H42v3h-9.35v4.15ZM6 13.1v-3h20.65v3Z"/>
                 </svg>

@@ -1,4 +1,4 @@
-<div class="container mt-3">
+<div class="container pt-3">
     <div class="d-flex align-items-center justify-content-between">
         <h2 class="fw-bold mb-0">My Activity</h2>
         <div>
@@ -18,7 +18,7 @@
                 </svg>
             </div>
             <div class="ms-3">
-                <div class="fw-bold fs-2 mb-2">866</div>
+                <div class="fw-bold fs-2 mb-2">{{caloriesBurned}}</div>
                 <div class="fw-bold text-black-50">Calories burn</div>
                 <nz-progress [nzPercent]="30" [nzStrokeColor]="'#C3FF4D'" [nzShowInfo]="false"></nz-progress>
             </div>
@@ -30,7 +30,7 @@
                 </svg>
             </div>
             <div class="ms-3">
-                <div class="fw-bold fs-2 mb-2">7579</div>
+                <div class="fw-bold fs-2 mb-2">{{steps}}</div>
                 <div class="fw-bold text-black-50">Steps</div>
                 <nz-progress [nzPercent]="30" [nzStrokeColor]="'#C3FF4D'" [nzShowInfo]="false"></nz-progress>
             </div>

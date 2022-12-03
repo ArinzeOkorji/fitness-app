@@ -25,6 +25,9 @@ export type ChartOptions = {
   styleUrls: ['./my-activity.component.scss']
 })
 export class MyActivityComponent implements OnInit {
+  caloriesBurned = 0;
+  steps = 0;
+  dataThreshold = 8;
   @ViewChild("chart") chart?: ChartComponent;
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
@@ -48,7 +51,7 @@ export class MyActivityComponent implements OnInit {
         },
         grid: {
           color: (context) => {
-            if(context.tick.value === 8) {
+            if(context.tick.value === this.dataThreshold) {
               return '#c5c5c5'
             } else {
               return 'transparent'
@@ -84,17 +87,56 @@ export class MyActivityComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const caloriesBuurnedIncrement = setInterval(
+      () => {
+        if(this.caloriesBurned !== 866) {
+          this.caloriesBurned++;
+          if(this.caloriesBurned === 150) {
+            this.caloriesBurned = 866
+          }
+        } else {
+          clearInterval(caloriesBuurnedIncrement)
+          
+        }
+      },
+      0.0000000000000001
+    )
+    const stepsIncrement = setInterval(
+      () => {
+        if(this.steps !== 7579) {
+          this.steps++;
+          if(this.steps === 150) {
+            this.steps = 7579
+          }
+        } else {
+          clearInterval(stepsIncrement)
+          
+        }
+      },
+      0.0000000000000001
+    )
+
+    this.data.forEach(datum => {
+      if(datum > this.dataThreshold) {
+        this.barColors.push('#C3FF4D')
+      } else {
+        this.barColors.push('#a99df9')
+      }
+    })
   }
 
   public barChartType: ChartType = 'bar';
+
+  data = [9.9, 9, 5, 7, 8.5, 4, 6];
+  barColors: string[] = [];
 
   public barChartData: ChartData<'bar'> = {
     labels: ['T', 'W', 'T', 'F', 'S', 'S', 'M'],
     datasets: [
       {
-        data: [10, 9, 8, 3, 4, 7, 5],
+        data: this.data,
         label: '',
-        backgroundColor: '#C3FF4D',
+        backgroundColor: this.barColors,
         borderRadius: 50,
         barThickness: 13
       }
