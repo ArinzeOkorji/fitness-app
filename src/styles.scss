@@ -54,6 +54,12 @@ body { margin: 0; font-family: 'Questrial', sans-serif !important;}
   }
 }
 
+.text {
+  &-primary {
+    color: $primary !important;
+  }
+}
+
 .border {
   &-primary {
     border: 1px solid $primary !important;
