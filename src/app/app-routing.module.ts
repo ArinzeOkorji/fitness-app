@@ -11,11 +11,20 @@ const routes: Routes = [
   {
     path: 'history',
     component: HistoryComponent
+  },
+  {
+    path: '',
+    redirectTo: 'my-activity',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: 'my-activity'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
