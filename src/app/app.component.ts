@@ -14,6 +14,8 @@ export class AppComponent {
   constructor(
     private readonly dialog: MatDialog
   ) {
+
+    console.log(document.referrer)
   }
 
   openOptions() {
